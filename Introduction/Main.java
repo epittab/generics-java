@@ -1,11 +1,12 @@
-package com.Generics;
+package com.Generics.Introduction;
 
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
         ArrayList<Integer> items = new ArrayList<>();
-
+        // by adding a type to generic, warnings help us avoid bugs
+        // in example ArrayList is a Generic
         items.add(1);
         items.add(2);
         items.add(3);
