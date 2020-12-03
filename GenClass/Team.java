@@ -27,7 +27,7 @@ public class Team {
             return false;
         } else {
             members.add(player);
-            System.out.print(player.getName() + " added to the team " + this.name + "." );
+            System.out.print(player.getName() + " added to the team " + this.name + ".\n" );
             return true;
         }
     }
@@ -44,5 +44,14 @@ public class Team {
         } else {
             tied++;
         }
+        played++;
+        if (opponent != null) {
+            opponent.matchResult(null, theirScore, ourScore);
+        }
     }
+
+    public int ranking(){
+        return (won * 2) + tied;
+    }
+
 }
